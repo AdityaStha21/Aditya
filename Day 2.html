@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DBMS Keys</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Types of Keys in DBMS</h1>
+    <h2>Super Key</h2>
+    <p>A super key is a set of one or more columns (attributes) that can uniquely identify a record within a table. It guarantees uniqueness for each row and can include more attributes than necessary.</p>
+    
+    <h2>Candidate Key</h2>
+    <p>A candidate key is a minimal super key, meaning it is the smallest set of columns that can uniquely identify a record. No subset of a candidate key can uniquely identify a record on its own.</p>
+    
+    <h2>Primary Key</h2>
+    <p>A primary key is a special type of key used to uniquely identify each record in a table. It ensures data integrity, efficient data retrieval, and the establishment of relationships between tables.</p>
+    
+    <h2>Alternate Key</h2>
+    <p>An alternate key is a candidate key that is not chosen as the primary key. Alternate keys can still uniquely identify records in a table but serve as secondary unique identifiers.</p>
+    
+    <h2>Foreign Key</h2>
+    <p>A foreign key is a field (or collection of fields) in one table that uniquely identifies a row of another table or the same table. It ensures referential integrity of the data.</p>
+    
+    <h2>Composite Key</h2>
+    <p>A composite key is a key that consists of two or more columns (attributes) that together uniquely identify a record in a table. It is useful when a single column is not sufficient to uniquely identify rows.</p>
+    
+    <h2>Artificial Key</h2>
+    <p>An artificial key, also known as a surrogate key, is a type of key used to uniquely identify each record in a table. Unlike natural keys, artificial keys are generated and have no inherent meaning outside of uniquely identifying a record.</p>
+    
+    <h2>Example: Bookstore Database</h2>
+    <h3>Books Table</h3>
+    <table>
+        <tr>
+            <th>Book ID</th>
+            <th>Title</th>
+            <th>Genre ID</th>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>To Kill a Mockingbird</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>1984</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>Pride and Prejudice</td>
+            <td>1</td>
+        </tr>
+    </table>
+    
+    <h3>Authors Table</h3>
+    <table>
+        <tr>
+            <th>Author ID</th>
+            <th>Author Name</th>
+        </tr>
+        <tr>
+            <td>201</td>
+            <td>Harper Lee</td>
+        </tr>
+        <tr>
+            <td>202</td>
+            <td>George Orwell</td>
+        </tr>
+        <tr>
+            <td>203</td>
+            <td>Jane Austen</td>
+        </tr>
+    </table>
+    
+    <h3>Genre Table</h3>
+    <table>
+        <tr>
+            <th>Genre ID</th>
+            <th>Genre Name</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Fiction</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Dystopian</td>
+        </tr>
+    </table>
+
+    <h3>Conclusion from Example</h3>
+    <ul>
+        <li><strong>Primary Key:</strong> Book ID</li>
+        <li><strong>Foreign Key:</strong> Genre ID</li>
+        <li><strong>Super Key:</strong> {Book ID}, {Book ID, Title}</li>
+        <li><strong>Candidate Key:</strong> {Book ID}</li>
+        <li><strong>Composite Key:</strong> {Book ID, Genre ID}</li>
+        <li><strong>Artificial Key:</strong> Book ID</li>
+    </ul>
+</body>
+</html>
