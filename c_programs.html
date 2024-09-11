@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>C Programs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h1 {
+            text-align: center;
+        }
+        pre {
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+      .code-output {
+        display: none;
+      }
+      .show-code-output {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .show-code-output:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>C Programs</h1>
+    <section>
+      <h3>ROLL NAME AGE</h3>
+      <button class="show-code-output" onclick="showCodeOutput(this)">Show Code and Output</button>
+      <div class="code-output">
+        <pre>
+          #include <stdio.h> 
+            #include <conio.h> 
+            #include <string.h> 
+            int main() 
+            { 
+            struct student 
+                { 
+                int roll; 
+                char name[50]; 
+                int age; 
+                }; 
+                struct student s; 
+                printf("Enter the data: (Roll Name Age)"); 
+                scanf("%d %s %d", &s.roll, &s.name, &s.age); 
+                printf("\nThe Roll is %d, The age is %d, and the name is %s", s.roll, s.age, s.name);  
+                printf("\nCode executed by Aditya"); 
+                getch(); 
+            return 0; 
+            }
+        </pre>
+        <p>Output:</p>
+        <pre>
+          Enter the data: (Roll Name Age)23 aditya 17
+          The Roll is 23, The age is 17, and the name is aditya
+          Code executed by Aditya
+        </pre>
+      </div>
+    </section>
+    <section>
+      <h3>Program that takes vehicle number, model and color of a car  using Structure and print it using Function. 
+      </h3>
+      <button class="show-code-output" onclick="showCodeOutput(this)">Show Code and Output</button>
+      <div class="code-output">
+        <pre>
+          #include <stdio.h> 
+          #include <conio.h> 
+          #include <string.h> 
+          int main() 
+          { 
+            struct vehicle 
+            { 
+            int no; 
+            char model[50]; 
+            char colour[50]; 
+            }; 
+          struct vehicle v; 
+          printf("Enter the data: (Vehicle Number, Model, Colour)"); 
+          scanf("%d %s %s", &v.no, &v.model, &v.colour); 
+          printf("\nThe Vehicle number is %d, The Model is %s, and the Colour is %s", v.no,  v.model, v.colour); 
+          printf("\nCode executed by Aditya"); 
+          getch(); 
+          return 0; 
+          } 
+            
+        </pre>
+        <p>Output:</p>
+        <pre>
+          Enter the data: (Vehicle Number, Model, Colour)7325 XMF8 blue
+          The Vehicle number is 7325, The Model is XMF8, and the Colour is blue
+          Code executed by Aditya
+        </pre>
+      </div>
+    </section>
+    <section></section>
+      <h3>Program that takes vehicle number, model and color of a car  using Structure and print it using Function. 
+      </h3>
+      <button class="show-code-output" onclick="showCodeOutput(this)">Show Code and Output</button>
+      <div class="code-output">
+        <pre>
+          #include <stdio.h> 
+          #include <conio.h> 
+          #include <string.h> 
+          int main() 
+          { 
+            struct vehicle 
+            { 
+            int no; 
+            char model[50]; 
+            char colour[50]; 
+            }; 
+          struct vehicle v; 
+          printf("Enter the data: (Vehicle Number, Model, Colour)"); 
+          scanf("%d %s %s", &v.no, &v.model, &v.colour); 
+          printf("\nThe Vehicle number is %d, The Model is %s, and the Colour is %s", v.no,  v.model, v.colour); 
+          printf("\nCode executed by Aditya"); 
+          getch(); 
+          return 0; 
+          } 
+            
+        </pre>
+        <p>Output:</p>
+        <pre>
+          Enter the data: (Vehicle Number, Model, Colour)7325 XMF8 blue
+          The Vehicle number is 7325, The Model is XMF8, and the Colour is blue
+          Code executed by Aditya
+        </pre>
+      </div>
+    </section>
+   
+    <script>
+      function showCodeOutput(button) {
+        var codeOutput = button.nextElementSibling;
+        codeOutput.style.display = codeOutput.style.display === 'block' ? 'none' : 'block';
+      }
+    </script>
+  </body>
+</html>
